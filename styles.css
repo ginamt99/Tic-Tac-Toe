@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+}
+
+header {
+    background-color: rgb(141, 141, 236);
+    color: aliceblue;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+main {
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    padding-left: 0;
+    width: 500px;
+    gap: 2rem;
+    margin: 12px auto;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    background-color: rgb(215, 215, 253);
+    box-shadow: 2px rgba(164, 164, 197, 0.4);
+    border-radius: 4px;
+}
+
+li h3 {
+    color: rgb(113, 25, 196);
+}
+
+button {
+    font: inherit;
+}
+
+.edit {
+    border: none;
+    background-color: transparent;
+    color: rgb(113, 25, 196);
+    padding-bottom: 8px;
+}
+
+.edit:hover {
+    cursor: pointer;
+}
+
+#new-game {
+    display: block;
+    margin: 1rem auto;
+    padding: 6px 14px;
+    background-color: rgb(115, 152, 255);
+    color: aliceblue;
+    border: none;
+    box-shadow: 1px rgba(0, 0, 0, 0.4px);
+    border-radius: 4px;
+}
+
+#new-game:hover {
+    background-color: rgb(84, 113, 192);
+    cursor: pointer;
+}
