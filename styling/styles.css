@@ -8,7 +8,7 @@ header {
     background-color: rgb(141, 141, 236);
     color: aliceblue;
     text-align: center;
-    padding: 2rem;
+    padding: 1.2rem;
     font-size: 1.5rem;
     box-sizing: border-box;
     width: 100%;
@@ -18,8 +18,8 @@ main {
     text-align: center;
 }
 
-ul {
-    display: grid;
+ul { /* half of the css code for game configuartion portion is in here, half is in the configuartion.css file */
+    display: grid; /*probably shouldve just used flexbox instead of grid here, oh well ¯\_(ツ)_/¯  pretty sloppy css code but I'm being lazy*/
     padding-left: 0;
     width: 500px;
     gap: 2rem;
@@ -43,19 +43,24 @@ button {
     font: inherit;
 }
 
-.edit {
-    border: none;
+.btn {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 6px 14px;
+    border: transparent;
+    border-radius: 4px;
     background-color: transparent;
     color: rgb(113, 25, 196);
     padding-bottom: 8px;
 }
 
-.edit:hover {
+.btn:hover {
     cursor: pointer;
+    background-color: rgba(113, 25, 196, 0.1);
 }
 
-#new-game {
-    display: block;
+.btn-style {
+    display: inline-block;
     margin: 1rem auto;
     padding: 6px 14px;
     background-color: rgb(115, 152, 255);
@@ -65,7 +70,8 @@ button {
     border-radius: 4px;
 }
 
-#new-game:hover {
+.btn-style:hover {
     background-color: rgb(84, 113, 192);
     cursor: pointer;
 }
+

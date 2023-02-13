@@ -5,64 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styling/styles.css">
+    <link rel="stylesheet" href="styling/overlays.css">
+    <link rel="stylesheet" href="styling/configuration.css">
+    <link rel="stylesheet" href="styling/game.css">
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/app.js" defer></script>    
 </head>
 <body>
+    <div id="backdrop"></div>
     <header>
         <h1>Play Tic, Tac, Toe</h1>
-        <p>Built with HTML, CSS, Javascript</p>
+        <p>Built with HTML, CSS, and Javascript</p>
     </header>
     <main>
-        <aside>
+        <aside class="modal" id="config-overlay">
             <h2>Choose Your Name</h2>
             <form>
-                <div>
+                <div class="form-control">
                     <label for="playername">Player Name</label>
-                    <input type="text" name="playername" id="playername">
+                    <input type="text" name="playername" id="playername" required>
                 </div>
+                <p id="config-error"></p>
                 <div>
-                    <button type="submit">Confirm</button>
-                    <button type="button">Cancel</button>
+                    <button class="btn" id="cancel" type="reset">Cancel</button>
+                    <button class="btn-style" type="submit">Confirm</button>
                 </div>
             </form>
         </aside>
+
         <section id="game-configuration">
             <ul id="player-names">
                 <li>
-                    <p>Player One</p>
-                    <h3>PLAYER NAME</h3>
-                    <h2>X</h2>
-                    <button class="edit">Edit</button>
+                    <article id="player-1-data">
+                        <p>Player One</p>
+                        <h3>PLAYER NAME</h3>
+                        <h2>X</h2>
+                        <button class="btn" id="edit-player-one" data-playerid="1">Edit</button>
+                    </article>
                 </li>
                 <li>
-                    <p>Player Two</p>
-                    <h3>PLAYER NAME</h3>
-                    <h2>O</h2>
-                    <button class="edit">Edit</button>                       
+                    <article id="player-2-data">
+                        <p>Player Two</p>
+                        <h3>PLAYER NAME</h3>
+                        <h2>O</h2>
+                        <button class="btn" id="edit-player-two" data-playerid="2">Edit</button>
+                    </article>
+                                          
                 </li>
             </ul>
-            <button id="new-game" type="reset">Start New Game</button>
+            <button class="btn-style" type="reset" id="start-game-btn">Start New Game</button>
         </section>
         <section id="active-game">
-            <article>
-                <h3>You won, <span id="winner">PLAYER NAME</span>!</h3>
+            <article id="game-over">
+                <h2>You won, <span id="winner">PLAYER NAME</span>!</h2>
                 <p>Click "Start New Game" above, to start a new game</p>
             </article>
 
             <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ol id="game-board">
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
 
-                <li></li>
-                <li></li>
-                <li></li>
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
 
-                <li></li>
-                <li></li>
-                <li></li>
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
             </ol>
         </section> 
     </main>

@@ -1,0 +1,50 @@
+/*Specifically for the configuration of overlay*/
+#config-overlay h2 {
+    margin: 0.5rem 0;
+}
+
+.form-control {
+    margin: 0.5rem 0;
+}
+
+.form-control label {
+    display: block;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control input {
+    font: inherit;
+    border: 1px solid rgb(204, 204, 204);
+    width: 15rem;
+    padding: 0.35rem;
+}
+
+#game-configuration {
+    width: 90%;
+    max-width: 40rem;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+}
+
+#game-configuration h3 {
+    font-size: 1.5rem;
+}
+
+#game-configuration p {
+    font-size: 1.2rem;
+}
+
+#config-error {
+    color: rgb(240, 129, 129);
+}
+
+.error label {
+    color: rgb(136, 1, 2);
+}
+
+.error input {
+    background-color: rgb(253, 219, 219);
+    color: rgb(136, 1, 2);
+    border-color: rgb(136, 1, 2);
+}
